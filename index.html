@@ -1,60 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta information for character encoding and responsive design -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yuwa Torkuma Jonathan's Profile</title>
-  <!-- Basic CSS styling for visual appeal -->
+  <!-- Internal stylesheet for organized and enhanced visual presentation -->
   <style>
+    /* Global Styles */
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
     }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header Styles */
     header {
       background: #333;
       color: #fff;
-      padding: 1rem 0;
+      padding: 1rem;
       text-align: center;
     }
     nav ul {
       list-style: none;
       padding: 0;
-      margin: 0;
+      margin: 0.5rem 0 0;
     }
     nav ul li {
       display: inline;
       margin: 0 10px;
     }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-    }
+
+    /* Section Styles */
     section {
+      background: #fff;
       padding: 2rem;
-      margin: 1rem;
+      margin: 1rem auto;
+      max-width: 800px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    /* Footer Styles */
     footer {
       background: #333;
       color: #fff;
       text-align: center;
-      padding: 1rem 0;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
+      padding: 1rem;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Section: Contains the main title and navigation menu -->
+  <!-- Header Section: Contains title and navigation links -->
   <header>
     <h1>Yuwa Torkuma Jonathan's Profile</h1>
     <nav>
       <ul>
-        <!-- Navigation links for smooth scrolling -->
+        <!-- Navigation links for smooth scrolling to sections -->
         <li><a href="#about-me">About Me</a></li>
         <li><a href="#hobbies">Hobbies</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -62,12 +83,12 @@
     </nav>
   </header>
 
-  <!-- About Me Section: Provides a personal introduction and profile image -->
+  <!-- About Me Section: Includes a profile image and a brief bio -->
   <section id="about-me">
     <h2>About Me</h2>
-    <!-- Profile image with a descriptive alt text for better accessibility -->
-    <img src="https://placehold.co/400" alt="Placeholder image of Yuwa Torkuma Jonathan">
-    <p>Hello, my name is Torkuma Yuwa. I am passionate about learning web development and love exploring new technologies.</p>
+    <!-- Replace the placeholder image URL with a real personal image for better personalization -->
+    <img src="https://picsum.photos/200/300.jpg" alt="Placeholder Portrait of Yuwa Torkuma Jonathan">
+    <p>Hello, my name is Torkuma Yuwa. I am passionate about learning web development and enjoy exploring new technologies.</p>
   </section>
 
   <!-- Hobbies Section: Lists personal hobbies -->
@@ -80,7 +101,7 @@
     </ul>
   </section>
 
-  <!-- Footer Section: Contains contact information -->
+  <!-- Footer Section: Provides contact information -->
   <footer id="contact">
     <h3>Contact</h3>
     <p>Email: <a href="mailto:torkumajonathanyuwa@gmail.com">torkumajonathanyuwa@gmail.com</a></p>
