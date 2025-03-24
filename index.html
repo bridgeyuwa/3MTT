@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta information for character encoding and responsive design -->
+  <!-- Meta information for character encoding, viewport, and SEO -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yuwa Torkuma Jonathan's personal profile page showcasing a bio, hobbies, and contact information.">
   <title>Yuwa Torkuma Jonathan's Profile</title>
-  <!-- Internal stylesheet for organized and enhanced visual presentation -->
+  <!-- Internal stylesheet with enhanced styling and responsiveness -->
   <style>
     /* Global Styles */
     body {
@@ -19,11 +20,12 @@
     a {
       color: #0066cc;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
     a:hover {
-      text-decoration: underline;
+      color: #004a99;
     }
-
+    
     /* Header Styles */
     header {
       background: #333;
@@ -40,7 +42,7 @@
       display: inline;
       margin: 0 10px;
     }
-
+    
     /* Section Styles */
     section {
       background: #fff;
@@ -57,7 +59,7 @@
       display: block;
       margin: 0 auto 1rem;
     }
-
+    
     /* Footer Styles */
     footer {
       background: #333;
@@ -66,6 +68,18 @@
       padding: 1rem;
       margin-top: 1rem;
     }
+    
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      nav ul li {
+        display: block;
+        margin: 5px 0;
+      }
+      section {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -73,9 +87,9 @@
   <!-- Header Section: Contains title and navigation links -->
   <header>
     <h1>Yuwa Torkuma Jonathan's Profile</h1>
-    <nav>
+    <nav aria-label="Main Navigation">
       <ul>
-        <!-- Navigation links for smooth scrolling to sections -->
+        <!-- Navigation links for smooth scrolling -->
         <li><a href="#about-me">About Me</a></li>
         <li><a href="#hobbies">Hobbies</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -86,26 +100,28 @@
   <!-- About Me Section: Includes a profile image and a brief bio -->
   <section id="about-me">
     <h2>About Me</h2>
-    <!-- Profile image -->
-    <img src="https://picsum.photos/200/300.jpg" alt="Image of Yuwa Torkuma Jonathan">
-    <p>Hello, my name is Torkuma Yuwa. I am passionate about learning web development and enjoy exploring new technologies.</p>
+    <!-- Replace the placeholder image with a real personal image when available -->
+    <img src="https://placehold.co/400" alt="Portrait of Yuwa Torkuma Jonathan">
+    <p>Hello, my name is Torkuma Yuwa. I am passionate about learning web development and exploring new technologies. I continuously strive to improve my skills and embrace challenges in my journey to become a proficient developer.</p>
   </section>
 
-  <!-- Hobbies Section: Lists personal hobbies -->
+  <!-- Hobbies Section: Lists personal hobbies with additional detail -->
   <section id="hobbies">
     <h2>My Hobbies</h2>
     <ul>
-      <li>Reading Books</li>
-      <li>Coding</li>
-      <li>Football</li>
+      <li>Reading Books – Exploring various genres and expanding my knowledge.</li>
+      <li>Coding – Experimenting with new languages and frameworks.</li>
+      <li>Football – Enjoying the excitement of the game and teamwork.</li>
     </ul>
   </section>
 
-  <!-- Footer Section: Provides contact information -->
+  <!-- Footer Section: Provides contact information and additional social media link -->
   <footer id="contact">
     <h3>Contact</h3>
     <p>Email: <a href="mailto:torkumajonathanyuwa@gmail.com">torkumajonathanyuwa@gmail.com</a></p>
     <p>Twitter: <a href="https://twitter.com/bridgesyuwa" target="_blank">@bridgesyuwa</a></p>
+    <!-- Additional social media link for a more robust profile -->
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yuwa-torkuma-jonathan" target="_blank">My LinkedIn</a></p>
   </footer>
 
 </body>
