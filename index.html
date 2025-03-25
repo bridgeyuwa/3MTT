@@ -2,89 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Ensure proper scaling on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bridges Webworks - Web Development Company</title>
   <style>
     /*--------------------------------------------------------------
     # Global Styles
     --------------------------------------------------------------*/
-    /* Reset default browser styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
-    /* Set basic body styles */
+
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       color: #333;
+      background-color: #f9f9f9;
     }
-    
+
     /*--------------------------------------------------------------
     # Hero Section
     --------------------------------------------------------------*/
     .hero {
-      background: #f4f4f4;
+      background: #004466;
+      color: #fff;
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
-    
+
     .hero h1 {
-      font-size: 2.8em;
-      margin-bottom: 20px;
+      font-size: 3em;
+      margin-bottom: 15px;
     }
-    
+
     .hero p {
       font-size: 1.2em;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
-    
-    .cta {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #333;
+
+    .cta-btn {
+      background: #ff6600;
       color: #fff;
-      text-decoration: none;
+      font-size: 1.1em;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
       transition: background 0.3s ease;
     }
-    
-    .cta:hover {
-      background: #555;
+
+    .cta-btn:hover {
+      background: #cc5500;
     }
-    
+
     /*--------------------------------------------------------------
     # Features Section
     --------------------------------------------------------------*/
     .features {
       display: flex;
-      justify-content: space-between;
-      padding: 40px 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
-    
+
     .feature {
-      flex: 1;
-      margin: 0 10px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
     }
-    
+
     .feature img {
-      max-width: 100%;
+      width: 80px;
       height: auto;
       margin-bottom: 15px;
     }
-    
-    .feature h2 {
+
+    .feature h3 {
       font-size: 1.5em;
       margin-bottom: 10px;
     }
-    
+
     .feature p {
       font-size: 1em;
     }
-    
+
     /*--------------------------------------------------------------
     # Footer Section
     --------------------------------------------------------------*/
@@ -92,18 +101,33 @@
       background: #222;
       color: #fff;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
     }
-    
+
+    footer a {
+      color: #ff6600;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     /*--------------------------------------------------------------
     # Responsive Design
     --------------------------------------------------------------*/
     @media (max-width: 768px) {
+      .hero {
+        padding: 60px 15px;
+      }
+
+      .hero h1 {
+        font-size: 2.2em;
+      }
+
       .features {
         flex-direction: column;
-      }
-      .feature {
-        margin: 10px 0;
+        align-items: center;
       }
     }
   </style>
@@ -111,44 +135,37 @@
 <body>
   <!-- Hero Section -->
   <header class="hero">
-    <!-- Main headline introducing the company -->
     <h1>Bridges Webworks</h1>
-    <!-- Subheadline with a brief description/value proposition -->
-    <p>Building digital bridges to connect your business with the world. We deliver modern, responsive, and custom web solutions.</p>
-    <!-- Call-to-action button -->
-    <a href="#contact" class="cta">Get Started</a>
+    <p>Building digital bridges to connect your business with the world.</p>
+    <button class="cta-btn">Get Started</button>
   </header>
 
   <!-- Features Section -->
   <section class="features">
-    <!-- First feature: Responsive Design -->
     <div class="feature">
-      <img src="responsive-icon.png" alt="Responsive Design Icon">
-      <h2>Responsive Design</h2>
-      <p>Our designs ensure your website looks great on all devices.</p>
+      <img src="responsive-icon.png" alt="Responsive Design">
+      <h3>Responsive Design</h3>
+      <p>Ensure your website adapts perfectly to all screen sizes.</p>
     </div>
-    <!-- Second feature: Custom Development -->
     <div class="feature">
-      <img src="development-icon.png" alt="Custom Development Icon">
-      <h2>Custom Development</h2>
-      <p>We build tailor-made websites that align perfectly with your brand.</p>
+      <img src="development-icon.png" alt="Custom Development">
+      <h3>Custom Development</h3>
+      <p>Tailor-made solutions designed specifically for your brand.</p>
     </div>
-    <!-- Third feature: SEO Optimization -->
     <div class="feature">
-      <img src="seo-icon.png" alt="SEO Optimization Icon">
-      <h2>SEO Optimization</h2>
-      <p>Improve your online visibility and drive organic traffic with our expert SEO services.</p>
+      <img src="seo-icon.png" alt="SEO Optimization">
+      <h3>SEO Optimization</h3>
+      <p>Improve your search rankings and online visibility.</p>
     </div>
   </section>
 
   <!-- Footer Section -->
-  <footer id="contact">
-    <!-- Contact details and copyright information -->
-    <p>Contact us: <a href="mailto:info@bridgeswebworks.com" style="color:#fff;">info@bridgeswebworks.com</a> | Phone: (123) 456-7890</p>
+  <footer>
+    <p>Contact us: <a href="mailto:info@bridgeswebworks.com">info@bridgeswebworks.com</a> | Phone: (123) 456-7890</p>
     <p>Follow us on 
-      <a href="#" style="color:#fff;">Facebook</a>, 
-      <a href="#" style="color:#fff;">Twitter</a>, 
-      <a href="#" style="color:#fff;">LinkedIn</a>
+      <a href="#">Facebook</a>, 
+      <a href="#">Twitter</a>, 
+      <a href="#">LinkedIn</a>
     </p>
     <p>&copy; 2025 Bridges Webworks. All rights reserved.</p>
   </footer>
