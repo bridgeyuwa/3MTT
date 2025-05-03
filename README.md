@@ -1,44 +1,50 @@
-# Simple Express.js REST API
+# Express.js & PostgreSQL CRUD API
 
-## Setup Instructions
+## Prerequisites
+- Node.js installed
+- PostgreSQL installed and running
 
+## Setup
 1. **Clone** the repository.
-2. **Install dependencies**:
-   ```bash
-   npm install
+2. **Create database**:
+   ```sql
+   CREATE DATABASE your_db_name;
+   \c your_db_name
+   \i init_db.sql
    ```
-3. **Start the server**:
+3. **Install dependencies**:
    ```bash
-   npm start
+   npm install express pg
    ```
-4. The API will run on **http://localhost:3000** by default.
+4. **Configure environment**: Create a `.env` file or set env vars:
+   ```dotenv
+   PG_USER=your_db_user
+   PG_PASSWORD=your_db_password
+   PG_DATABASE=your_db_name
+   PG_HOST=localhost
+   PG_PORT=5432
+   ```
+5. **Run server**:
+   ```bash
+   node server.js
+   ```
 
 ## API Endpoints
+| Method | Endpoint     | Description         |
+| ------ | ------------ | ------------------- |
+| GET    | `/users`     | Retrieve all users  |
+| GET    | `/users/:id` | Retrieve user by ID |
+| POST   | `/users`     | Create a new user   |
+| PUT    | `/users/:id` | Update a user by ID |
+| DELETE | `/users/:id` | Delete a user by ID |
 
-| Method | Endpoint         | Description                     |
-| ------ | ---------------- | ------------------------------- |
-| GET    | `/`              | Returns "Hello, World!"        |
-| GET    | `/items`         | Retrieve all items              |
-| GET    | `/items/:id`     | Retrieve a single item by ID    |
-| POST   | `/items`         | Create a new item               |
-| PUT    | `/items/:id`     | Update an item by ID            |
-| DELETE | `/items/:id`     | Delete an item by ID            |
-
-### Request & Response Examples
-
-**Create Item**
+### Example Requests
 ```bash
-curl -X POST http://localhost:3000/items \
+# Create user
+curl -X POST http://localhost:3000/users \
   -H 'Content-Type: application/json' \
-  -d '{"name":"Sample","description":"A sample item."}'
-```
+  -d '{"name":"Alice","email":"alice@example.com","age":30}'
 
-**Expected Response**
-```json
-{
-  "id": 1,
-  "name": "Sample",
-  "description": "A sample item."
-}
-```
+# Get all users
+curl http://localhost:3000/users
 ```
