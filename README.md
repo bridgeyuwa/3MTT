@@ -1,22 +1,44 @@
-# Fetch and Display List App
+# Simple Express.js REST API
 
-A React application that fetches posts from JSONPlaceholder and displays them in a reusable list component. Includes search/filter functionality, styled loading and error messages, and PropTypes validation.
+## Setup Instructions
 
-## Features
-- Fetch data from https://jsonplaceholder.typicode.com/posts
-- Loading and error states with styled messages
-- Reusable `ListComponent` with `renderItem` prop
-- Search/filter posts by title
-- PropTypes validation for components
-- Unit tests for core functionality
+1. **Clone** the repository.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Start the server**:
+   ```bash
+   npm start
+   ```
+4. The API will run on **http://localhost:3000** by default.
 
-## Setup & Run
+## API Endpoints
+
+| Method | Endpoint         | Description                     |
+| ------ | ---------------- | ------------------------------- |
+| GET    | `/`              | Returns "Hello, World!"        |
+| GET    | `/items`         | Retrieve all items              |
+| GET    | `/items/:id`     | Retrieve a single item by ID    |
+| POST   | `/items`         | Create a new item               |
+| PUT    | `/items/:id`     | Update an item by ID            |
+| DELETE | `/items/:id`     | Delete an item by ID            |
+
+### Request & Response Examples
+
+**Create Item**
 ```bash
-# Install dependencies
-npm install
+curl -X POST http://localhost:3000/items \
+  -H 'Content-Type: application/json' \
+  -d '{"name":"Sample","description":"A sample item."}'
+```
 
-# Start development server
-npm start
-
-# Run tests
-npm test
+**Expected Response**
+```json
+{
+  "id": 1,
+  "name": "Sample",
+  "description": "A sample item."
+}
+```
+```

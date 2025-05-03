@@ -1,0 +1,24 @@
+{
+  "info": {
+    "name": "Express API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Items",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/items", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["items"] }
+      }
+    },
+    {
+      "name": "Create Item",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "http://localhost:3000/items", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["items"] },
+        "body": { "mode": "raw", "raw": "{ \"name\": \"Test\", \"description\": \"Test desc\" }" }
+      }
+    }
+  ]
+}
