@@ -1,5 +1,8 @@
 # Express.js & PostgreSQL CRUD API
 
+## Objective
+- Create a simple Express.js API that connects to a PostgreSQL database and performs basic database operations (CRUD - Create, Read, Update, Delete).
+
 ## Prerequisites
 - Node.js installed
 - PostgreSQL installed and running
